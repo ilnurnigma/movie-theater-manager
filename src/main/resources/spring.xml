@@ -20,6 +20,14 @@
         </property>
     </bean>
 
+    <bean id="managerConsole" class="my.manager.console.ManagerConsole">
+        <constructor-arg ref="userService"/>
+    </bean>
+
+    <bean id="userService" class="my.manager.service.UserService">
+
+    </bean>
+
     <bean id="auditoriumService" class="my.manager.service.AuditoriumService">
         <constructor-arg value="#{'${names}'.split(',')}"/>
         <constructor-arg value="#{'${number_of_seats}'.split(',')}"/>

@@ -9,7 +9,11 @@ import java.util.List;
  * Created on 7/1/2016.
  */
 public class UserService {
-    private static List<User> userList = new ArrayList<User>();
+    private static List<User> userList = new ArrayList<>();
+
+    static {
+        userList.add(new User(123, "Vasily", "Pupkin", "vasya.pupkin@mail.ru"));
+    }
 
     public void save(User user) {
         userList.add(user);
